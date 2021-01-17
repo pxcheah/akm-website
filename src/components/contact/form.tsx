@@ -19,7 +19,7 @@ const ContactForm = () => (
     <VStack spacing={4}>
       <Input borderRadius={0} placeholder="Name" />
       <Input borderRadius={0} placeholder="Email" />
-      <Textarea borderRadius={0} size="lg" placeholder="Message" resize="vertical" />
+      <Textarea borderRadius={0} placeholder="Message" rows={8} resize="vertical" />
     </VStack>
     <Button size="lg" w="200px" mt={8} borderRadius={0} colorScheme="purple">
       Send
