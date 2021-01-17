@@ -1,4 +1,6 @@
-import { Box, Button, Input, Textarea, VStack } from '@chakra-ui/react';
+import {
+  Box, Button, Input, Textarea, VStack,
+} from '@chakra-ui/react';
 
 const ContactForm = () => (
   <Box
@@ -7,7 +9,7 @@ const ContactForm = () => (
     pos="relative"
     boxShadow="xl"
     _before={{
-      content: `""`,
+      content: '""',
       pos: 'absolute',
       left: 0,
       top: 0,

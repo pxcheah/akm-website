@@ -1,24 +1,20 @@
-import type { FunctionComponent } from 'react';
 import { Box } from '@chakra-ui/react';
 import SwiperCore, { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import 'swiper/swiper.min.css';
 import 'swiper/components/pagination/pagination.min.css';
-import styles from './styles.module.css';
 
 import ColoredSection from '@/components/colored-section';
+import { CompanyValueConfig } from '@/types/home';
 import OurFocusSlide from './slide';
-import { CompanyValue } from '@/types/home';
+import styles from './styles.module.css';
 
 SwiperCore.use([Pagination]);
 
-interface ValuesProps {
-  list: CompanyValue[];
-}
+type ValuesProps = CompanyValueConfig;
 
-const Values: FunctionComponent<ValuesProps> = ({ list }) => (
-  <ColoredSection bg="blue.400" heading="What we value">
+const Values = ({ bg, heading, items }: ValuesProps) => (
+  <ColoredSection bg={bg} heading={heading}>
     <Swiper
       className={styles.sliderContainer}
       slidesPerView={1}
@@ -39,7 +35,7 @@ const Values: FunctionComponent<ValuesProps> = ({ list }) => (
         },
       }}
     >
-      {list.map((item, index) => (
+      {items.map((item, index) => (
         <SwiperSlide key={index}>
           <OurFocusSlide {...item} />
         </SwiperSlide>

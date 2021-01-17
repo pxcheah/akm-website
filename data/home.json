@@ -1,60 +1,125 @@
 {
   "tagline": "Tagline here",
   "intro": "We're a chemical raw material supplier based in Malaysia. We offer quality products from well-established principals worldwide.",
-  "products": [
-    {
-      "name": "Fibre Reinforced Plastics (FRP)",
-      "image": ""
-    },
-    {
-      "name": "Polyurethane (PU)",
-      "image": ""
-    },
-    {
-      "name": "Powder Coating",
-      "image": ""
-    },
-    {
-      "name": "Ceramic Coating",
-      "image": ""
-    },
-    {
-      "name": "Absorbants",
-      "image": ""
-    }
-  ],
-  "values": [
-    {
-      "image": "/images/our-focus/commitment.svg",
-      "title": "Commitment",
-      "description": "We develop relationships that make a positive difference in our customers' lives."
-    },
-    {
-      "image": "/images/our-focus/quality.svg",
-      "title": "Quality",
-      "description": "We supply outstanding materials and unsurpassed services that, together, deliver premium value to our customers."
-    },
-    {
-      "image": "/images/our-focus/integrity.svg",
-      "title": "Integrity",
-      "description": "We uphold the highest standards of integrity in all of our actions.",
-      "shadowOffset": -2
-    },
-    {
-      "image": "/images/our-focus/teamwork.svg",
-      "title": "Teamwork",
-      "description": "We work together, across boundaries, to meet the needs of our customers and to help the company win."
-    },
-    {
-      "image": "/images/our-focus/growth.svg",
-      "title": "Growth",
-      "description": "We value our people, encourage their development and reward their performance."
-    }
-  ],
-  "principals": [
-    {
-      "name": "Polynt",
-      "logo": "/images/principals/polynt.png"
-    }
-  ]
+  "products": {
+    "heading": "Our products",
+    "subHeading": "Discover",
+    "categories": [
+      {
+        "name": "Fibre Reinforced Plastics (FRP)",
+        "image": ""
+      },
+      {
+        "name": "Polyurethane (PU)",
+        "image": ""
+      },
+      {
+        "name": "Powder Coating",
+        "image": "",
+        "bg": "#EDB9C3"
+      },
+      {
+        "name": "Ceramic Coating",
+        "image": ""
+      },
+      {
+        "name": "Absorbants",
+        "image": ""
+      }
+    ]
+  },
+  "values": {
+    "bg": "blue.400",
+    "heading": "What we value",
+    "items": [
+      {
+        "image": "/images/our-focus/commitment.svg",
+        "title": "Commitment",
+        "description": "We develop relationships that make a positive difference in our customers' lives."
+      },
+      {
+        "image": "/images/our-focus/quality.svg",
+        "title": "Quality",
+        "description": "We supply outstanding materials and unsurpassed services that, together, deliver premium value to our customers."
+      },
+      {
+        "image": "/images/our-focus/integrity.svg",
+        "title": "Integrity",
+        "description": "We uphold the highest standards of integrity in all of our actions.",
+        "shadowOffset": -2
+      },
+      {
+        "image": "/images/our-focus/teamwork.svg",
+        "title": "Teamwork",
+        "description": "We work together, across boundaries, to meet the needs of our customers and to help the company win."
+      },
+      {
+        "image": "/images/our-focus/growth.svg",
+        "title": "Growth",
+        "description": "We value our people, encourage their development and reward their performance."
+      }
+    ]
+  },
+  "principals": {
+    "bg": "purple.600",
+    "heading": "Our principals",
+    "logos": [
+      {
+        "name": "Polynt",
+        "logo": "/images/principals/polynt.svg"
+      },
+      {
+        "name": "Weibo",
+        "logo": "/images/principals/wbo.svg"
+      },
+      {
+        "name": "Nittobo",
+        "logo": "/images/principals/nittobo.svg"
+      },
+      {
+        "name": "Regina Glass",
+        "logo": "/images/principals/regina-glass.svg",
+        "hideInTablet": true
+      },
+      {
+        "name": "United Initiators",
+        "logo": "/images/principals/united-initiators.svg"
+      },
+      {
+        "name": "Lantor",
+        "logo": "/images/principals/lantor.svg"
+      },
+      {
+        "name": "TR Industries",
+        "logo": "/images/principals/tr-industries.svg"
+      },
+      {
+        "name": "Huntsman",
+        "logo": "/images/principals/huntsman.svg"
+      },
+      {
+        "name": "CCT",
+        "logo": "/images/principals/cct.svg"
+      },
+      {
+        "name": "Chemiewerk",
+        "logo": "/images/principals/cwk.svg"
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Drop us a message",
+    "subHeading": "We are thrilled to hear what you want to tell us and offer the products you need for your business!",
+    "info": [
+      {
+        "name": "Phone",
+        "value": "03-5882 9455",
+        "url": "tel:+60358829455"
+      },
+      {
+        "name": "Fax",
+        "value": "03-5882 9755"
+      }
+    ]
+  }
 }

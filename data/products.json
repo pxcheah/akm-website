@@ -1,0 +1,27 @@
+{
+  "products": {
+    "categories": [
+      {
+        "name": "Fibre Reinforced Plastics (FRP)",
+        "image": ""
+      },
+      {
+        "name": "Polyurethane (PU)",
+        "image": ""
+      },
+      {
+        "name": "Powder Coating",
+        "image": "",
+        "bg": "#EDB9C3"
+      },
+      {
+        "name": "Ceramic Coating",
+        "image": ""
+      },
+      {
+        "name": "Absorbants",
+        "image": ""
+      }
+    ]
+  }
+}

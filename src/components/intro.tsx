@@ -5,7 +5,7 @@ interface IntroProps {
 }
 
 const Intro = ({ paragraph }: IntroProps) => (
-  <Center>
+  <Center as="section">
     <Container maxW={{ base: '60ch', lg: '80ch' }} py={{ base: 24, lg: 32 }}>
       <Text
         fontSize={{ base: '2xl', md: '3xl' }}

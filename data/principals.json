@@ -1,0 +1,43 @@
+[
+  {
+    "name": "Polynt",
+    "logo": "/images/principals/polynt.svg"
+  },
+  {
+    "name": "Weibo",
+    "logo": "/images/principals/wbo.svg"
+  },
+  {
+    "name": "Nittobo",
+    "logo": "/images/principals/nittobo.svg"
+  },
+  {
+    "name": "Regina Glass",
+    "logo": "/images/principals/regina-glass.svg",
+    "hideInTablet": true
+  },
+  {
+    "name": "United Initiators",
+    "logo": "/images/principals/united-initiators.svg"
+  },
+  {
+    "name": "Lantor",
+    "logo": "/images/principals/lantor.svg"
+  },
+  {
+    "name": "TR Industries",
+    "logo": "/images/principals/tr-industries.svg"
+  },
+  {
+    "name": "Huntsman",
+    "logo": "/images/principals/huntsman.svg"
+  },
+  {
+    "name": "CCT",
+    "logo": "/images/principals/cct.svg"
+  },
+  {
+    "name": "Chemiewerk",
+    "logo": "/images/principals/cwk.svg"
+  }
+]

@@ -1,17 +1,42 @@
-import { Grid, Image } from '@chakra-ui/react';
+import { Flex, Grid, Image } from '@chakra-ui/react';
 
+import { PrincipalsConfig } from '@/types/home';
 import ColoredSection from './colored-section';
 
-const Principals = () => (
-  <ColoredSection bg="purple.600" heading="Our principals">
-    {/* <Box bgGradient="linear(107deg, purple.400, purple.600)"> */}
-    <Grid px={8} templateColumns="repeat(5, 1fr)" gap={12} placeItems="center">
-      <Image maxH={24} src="/images/principals/polynt.png" alt="Polynt" />
-      <Image maxH={24} src="/images/principals/united-initiators.svg" alt="United Initiators" />
-      <Image maxH={24} src="/images/principals/tr-industries.svg" alt="TR Industries" />
-      <Image maxH={24} src="/images/principals/huntsman.svg" alt="Huntsman" />
-      <Image maxH={24} src="/images/principals/lantor.svg" alt="Lantor" />
+type PrincipalsProps = PrincipalsConfig;
+
+const Principals = ({ bg, heading, logos }: PrincipalsProps) => (
+  <ColoredSection bg={bg} heading={heading}>
+    <Grid
+      px={4}
+      templateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)', xl: 'repeat(5, 1fr)' }}
+      rowGap={{ base: 16, xl: 24 }}
+      columnGap={{ base: 8, xl: 16 }}
+    >
+      {logos.map(({ name, logo }, index) => (
+        <Flex key={index} maxH="4.5rem" alignItems="center" justifyContent="center">
+          <Image maxH="100%" src={logo} alt={name} />
+        </Flex>
+      ))}
     </Grid>
+    {/* <Grid
+      px={8}
+      templateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)', xl: 'repeat(5, 1fr)' }}
+      rowGap={24}
+      columnGap={16}
+      placeItems="center"
+    >
+      {logos.map(({ name, logo, hideInTablet }, index) => (
+        <Image
+          key={index}
+          display={{ base: 'block', md: hideInTablet ? 'none' : 'block', xl: 'block' }}
+          maxW={40}
+          maxH="4.5rem"
+          src={logo}
+          alt={name}
+        />
+      ))}
+    </Grid> */}
   </ColoredSection>
 );
 

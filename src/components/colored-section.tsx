@@ -1,5 +1,7 @@
 import type { FunctionComponent } from 'react';
-import { Box, Container, Heading, Text } from '@chakra-ui/react';
+import {
+  Box, Container, Heading, Text,
+} from '@chakra-ui/react';
 
 interface SectionProps {
   bg: string;
@@ -7,12 +9,14 @@ interface SectionProps {
 }
 
 const ColoredSection: FunctionComponent<SectionProps> = ({ bg, heading, children }) => (
-  <Box bg={bg} overflow="hidden">
-    <Container maxW="container.xl" py={{ base: 20, lg: 24 }} px={12}>
+  <Box as="section" bg={bg} overflow="hidden">
+    <Container maxW="container.xl" py={{ base: 20, md: 24 }} px={{ base: 6, md: 12 }}>
       <Heading as="h2" size="xl" color="white">
         {heading}
       </Heading>
-      <Box my={{ base: 8, lg: 16 }}>{children}</Box>
+      <Box mt={{ base: 16, lg: 24 }} mb={{ base: 8, lg: 16 }}>
+        {children}
+      </Box>
     </Container>
   </Box>
 );

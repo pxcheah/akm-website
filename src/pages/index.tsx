@@ -15,8 +15,8 @@ const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => (
     <Hero />
     <Intro paragraph={props.intro} />
     <OurProducts />
-    <Values list={props.values} />
-    <Principals />
+    <Values {...props.values} />
+    <Principals {...props.principals} />
     <Contact />
   </>
 );

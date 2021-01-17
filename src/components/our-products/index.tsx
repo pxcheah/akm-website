@@ -1,7 +1,9 @@
-import { Box, Container, Heading, Text } from '@chakra-ui/react';
+import {
+  Box, Container, Heading, Text,
+} from '@chakra-ui/react';
 
 const OurProducts = () => (
-  <Box mb={{ base: 20, lg: 24 }} overflow="hidden">
+  <Box as="section" mb={{ base: 20, lg: 24 }} overflow="hidden">
     <Container maxW="container.xl" px={12}>
       <Heading as="h2" size="xl">
         Our products
