@@ -1,6 +1,10 @@
 import { Center, Container, Text } from '@chakra-ui/react';
 
-const Intro = () => (
+interface IntroProps {
+  paragraph: string;
+}
+
+const Intro = ({ paragraph }: IntroProps) => (
   <Center>
     <Container maxW={{ base: '60ch', lg: '80ch' }} py={{ base: 24, lg: 32 }}>
       <Text
@@ -9,8 +13,7 @@ const Intro = () => (
         align={{ base: 'left', md: 'center' }}
         color="gray.300"
       >
-        We're a chemical raw material supplier based in Malaysia. We offer quality products from well-established
-        principals worldwide.
+        {paragraph}
       </Text>
     </Container>
   </Center>

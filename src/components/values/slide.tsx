@@ -1,12 +1,9 @@
 import type { FunctionComponent } from 'react';
 import { Box, Heading, Image, Text } from '@chakra-ui/react';
 
-interface SlideProps {
-  image: string;
-  title: string;
-  description: string;
-  shadowOffset?: number;
-}
+import { CompanyValue } from '@/types/home';
+
+type SlideProps = CompanyValue;
 
 const OurFocusSlide: FunctionComponent<SlideProps> = ({ image, title, description, shadowOffset = 0 }) => (
   <Box color="white" pr={{ base: 12, md: 24 }}>
