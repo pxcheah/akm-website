@@ -1,0 +1,22 @@
+.sliderContainer {
+  overflow: visible;
+}
+
+.pagination {
+  display: block;
+}
+
+.bullet {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-right: 0.75rem;
+  border-radius: 100%;
+  background-color: #7337e0;
+  opacity: 0.2;
+}
+
+.bulletActive {
+  background: white;
+  opacity: 1;
+}

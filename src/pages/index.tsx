@@ -1,7 +1,7 @@
 import Hero from '@/components/hero';
 import Intro from '@/components/intro';
-import AboutUs from '@/components/about-us';
-import OurFocus from '@/components/our-focus';
+import OurProducts from '@/components/our-products';
+import Values from '@/components/values';
 import Principals from '@/components/principals';
 import Contact from '@/components/contact';
 
@@ -10,8 +10,8 @@ const Home = () => {
     <>
       <Hero />
       <Intro />
-      {/* <AboutUs /> */}
-      <OurFocus />
+      <OurProducts />
+      <Values />
       <Principals />
       <Contact />
     </>
