@@ -1,4 +1,4 @@
-import { Box, Container, Heading, Text } from '@chakra-ui/react';
+import { Box, Container, Heading, HStack, Image, Text } from '@chakra-ui/react';
 import SwiperCore, { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -25,6 +25,11 @@ const ProductCategories = ({ items }: ProductCategoriesProps) => (
         <Swiper
           className={styles.sliderContainer}
           spaceBetween={8}
+          navigation={{
+            nextEl: '.product-slider-next',
+            prevEl: '.product-slider-prev',
+            disabledClass: styles.sliderButtonDisabled,
+          }}
           breakpoints={{ 768: { slidesPerView: 2, spaceBetween: 16 } }}
         >
           {items.map((item, index) => (
@@ -33,6 +38,22 @@ const ProductCategories = ({ items }: ProductCategoriesProps) => (
             </SwiperSlide>
           ))}
         </Swiper>
+        <HStack spacing={2} mt={6}>
+          <Image
+            className="product-slider-prev"
+            cursor="pointer"
+            w={12}
+            src="/images/arrow-left-circle.svg"
+            alt="Previous"
+          />
+          <Image
+            className="product-slider-next"
+            cursor="pointer"
+            w={12}
+            src="/images/arrow-right-circle.svg"
+            alt="Next"
+          />
+        </HStack>
       </Box>
     </Container>
   </Box>

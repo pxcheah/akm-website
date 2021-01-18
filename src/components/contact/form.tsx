@@ -1,11 +1,9 @@
-import {
-  Box, Button, Input, Textarea, VStack,
-} from '@chakra-ui/react';
+import { Box, Button, Input, Textarea, VStack } from '@chakra-ui/react';
 
 const ContactForm = () => (
   <Box
     flexGrow={1}
-    p={8}
+    p={{ base: 6, lg: 8 }}
     pos="relative"
     boxShadow="xl"
     _before={{
@@ -21,7 +19,7 @@ const ContactForm = () => (
     <VStack spacing={4}>
       <Input borderRadius={0} placeholder="Name" />
       <Input borderRadius={0} placeholder="Email" />
-      <Textarea borderRadius={0} placeholder="Message" rows={8} resize="vertical" />
+      <Textarea borderRadius={0} placeholder="Message" rows={12} resize="vertical" />
     </VStack>
     <Button size="lg" w="200px" mt={8} borderRadius={0} colorScheme="purple">
       Send

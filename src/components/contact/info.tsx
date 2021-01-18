@@ -4,13 +4,15 @@ const ContactInfo = () => (
   <Stack mt={8} spacing={6}>
     <Box>
       <Text fontWeight="bold">Phone</Text>
-      <Link href="tel:+60358829455" _hover={{ textDecoration: 'none' }}>
-        +603 5882 9455
-      </Link>
+      <Link href="tel:+60358829455">+603 5882 9455</Link>
     </Box>
     <Box>
       <Text fontWeight="bold">Fax</Text>
       <Text>+603 5882 9755</Text>
+    </Box>
+    <Box>
+      <Text fontWeight="bold">Email</Text>
+      <Link href="mailto:alseykimia@gmail.com">alseykimia@gmail.com</Link>
     </Box>
     <Box>
       <Text fontWeight="bold">Address</Text>
@@ -19,7 +21,7 @@ const ContactInfo = () => (
         <br />
         Taman Industri Pusat Bandar Puchong,
         <br />
-        47100 Puchong, Selangor
+        47100 Puchong, Selangor, Malaysia
       </Text>
       <Link
         href="https://goo.gl/maps/iqCU5KShD63pBRqS7"

@@ -7,21 +7,21 @@
   },
   {
     "bg": "linear-gradient(60deg, #5e7293, #2d3748)",
-    "name": "Polyurethane (PU)",
+    "name": "Polyurethanes (PU)",
     "image": "/images/products/rigid-polyurethane-foam.png",
     "imageAlt": "Rigid polyurethane foam for cold rooms"
   },
   {
     "bg": "linear-gradient(34deg, #edb9c3, #ffb0bf)",
-    "name": "Powder Coating",
+    "name": "Powder Coatings",
     "image": "/images/products/cable-trunking.png",
     "imageAlt": "Cable trunking"
   },
   {
     "bg": "linear-gradient(146deg, #38a169, #2f855a)",
-    "name": "Ceramic Coating",
-    "image": "/images/products/rigid-polyurethane-foam.png",
-    "iamgeAlt": ""
+    "name": "Ceramic Coatings",
+    "image": "/images/products/ceramic-tile.png",
+    "iamgeAlt": "Ceramic tile"
   },
   {
     "bg": "linear-gradient(to right, #ffc179, #f6ad55)",

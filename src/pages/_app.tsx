@@ -2,7 +2,6 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { ChakraProvider } from '@chakra-ui/react';
 import 'swiper/swiper.min.css';
-import 'swiper/components/navigation/navigation.min.css';
 import 'swiper/components/pagination/pagination.min.css';
 
 import Footer from '@/components/footer';
