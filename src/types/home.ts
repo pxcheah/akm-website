@@ -1,17 +1,15 @@
-interface SectionConfig {
+export interface ProductCategory {
   bg: string;
-  heading: string;
+  name: string;
+  image: string;
+  imageAlt?: string;
 }
 
-export interface CompanyValueItem {
+export interface CompanyValue {
   image: string;
   title: string;
   description: string;
   shadowOffset?: number;
-}
-
-export interface CompanyValueConfig extends SectionConfig {
-  items: CompanyValueItem[];
 }
 
 export interface PrincipalLogo {
@@ -20,12 +18,8 @@ export interface PrincipalLogo {
   hideInTablet?: boolean;
 }
 
-export interface PrincipalsConfig extends SectionConfig {
-  logos: PrincipalLogo[];
-}
-
 export interface HomeConfig {
-  intro: string;
-  values: CompanyValueConfig;
-  principals: PrincipalsConfig;
+  productCategories: ProductCategory[];
+  values: CompanyValue[];
+  principals: PrincipalLogo[];
 }

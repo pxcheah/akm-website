@@ -1,15 +1,11 @@
 import type { FunctionComponent } from 'react';
-import {
-  Box, Heading, Image, Text,
-} from '@chakra-ui/react';
+import { Box, Heading, Image, Text } from '@chakra-ui/react';
 
-import { CompanyValueItem } from '@/types/home';
+import { CompanyValue } from '@/types/home';
 
-type SlideProps = CompanyValueItem;
+type SlideProps = CompanyValue;
 
-const OurFocusSlide: FunctionComponent<SlideProps> = ({
-  image, title, description, shadowOffset = 0,
-}) => (
+const ValueSlide: FunctionComponent<SlideProps> = ({ image, title, description, shadowOffset = 0 }) => (
   <Box color="white" pr={{ base: 12, md: 24 }}>
     {/* TODO: look into padding-right */}
     <Image
@@ -17,6 +13,7 @@ const OurFocusSlide: FunctionComponent<SlideProps> = ({
       h={32}
       src={image}
       alt={title}
+      userSelect="none"
       _after={{
         content: "''",
         width: 20,
@@ -32,4 +29,4 @@ const OurFocusSlide: FunctionComponent<SlideProps> = ({
   </Box>
 );
 
-export default OurFocusSlide;
+export default ValueSlide;

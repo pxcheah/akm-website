@@ -1,20 +1,20 @@
 // https://coolors.co/2a2d34-7e3ce7-23d5ab-009ddc-f26430
 // logo color: #226993
 
-export const colors = {
+const colors = {
   black: '#2a2d34',
-  orange: {
-    50: '#f8eae8',
-    100: '#facebf',
-    200: '#f7ae96',
-    300: '#f4906d',
-    400: '#f3794d',
-    500: '#f26430', // chosen
-    600: '#e75e2c',
-    700: '#d95728',
-    800: '#cb5025',
-    900: '#b1451f',
-  },
+  // orange: {
+  //   50: '#f8eae8',
+  //   100: '#facebf',
+  //   200: '#f7ae96',
+  //   300: '#f4906d',
+  //   400: '#f3794d',
+  //   500: '#f26430', // chosen
+  //   600: '#e75e2c',
+  //   700: '#d95728',
+  //   800: '#cb5025',
+  //   900: '#b1451f',
+  // },
   teal: {
     50: '#dff8f1',
     100: '#b0eddb',
@@ -52,3 +52,5 @@ export const colors = {
     900: '#3a16c7',
   },
 };
+
+export default colors;

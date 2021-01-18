@@ -22,6 +22,7 @@ const GradientBg: FunctionComponent = ({ children }) => {
 
   return (
     <Box
+      pos="relative"
       bgGradient={`linear(107deg, ${purple} 0%, ${blue} 60%, ${teal} 100%)`}
       bgSize="200% 200%"
       animation={`${gradient} 30s ease infinite`}

@@ -1,0 +1,32 @@
+[
+  {
+    "bg": "linear-gradient(34deg, #00aaac, #00c1d1)",
+    "name": "Fibre Reinforced Plastics (FRP)",
+    "image": "/images/products/yacht.png",
+    "imageAlt": "Yacht"
+  },
+  {
+    "bg": "linear-gradient(60deg, #5e7293, #2d3748)",
+    "name": "Polyurethane (PU)",
+    "image": "/images/products/rigid-polyurethane-foam.png",
+    "imageAlt": "Rigid polyurethane foam for cold rooms"
+  },
+  {
+    "bg": "linear-gradient(34deg, #edb9c3, #ffb0bf)",
+    "name": "Powder Coating",
+    "image": "/images/products/cable-trunking.png",
+    "imageAlt": "Cable trunking"
+  },
+  {
+    "bg": "linear-gradient(146deg, #38a169, #2f855a)",
+    "name": "Ceramic Coating",
+    "image": "/images/products/rigid-polyurethane-foam.png",
+    "iamgeAlt": ""
+  },
+  {
+    "bg": "linear-gradient(to right, #ffc179, #f6ad55)",
+    "name": "Absorbants",
+    "image": "/images/products/molecular-sieve.png",
+    "imageAlt": "Molecular sieve"
+  }
+]

@@ -1,22 +1,22 @@
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 
-import { HomeConfig } from '@/types/home';
+import { CompanyValue, HomeConfig, PrincipalLogo, ProductCategory } from '@/types/home';
 import { getData } from '@/utils/config';
 
 import Hero from '@/components/hero';
 import Intro from '@/components/intro';
-import OurProducts from '@/components/our-products';
-import Values from '@/components/values';
+import ProductCategories from '@/components/product-categories';
+import CompanyValues from '@/components/company-values';
 import Principals from '@/components/principals';
 import Contact from '@/components/contact';
 
-const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => (
+const Home = ({ productCategories, values, principals }: InferGetStaticPropsType<typeof getStaticProps>) => (
   <>
     <Hero />
-    <Intro paragraph={props.intro} />
-    <OurProducts />
-    <Values {...props.values} />
-    <Principals {...props.principals} />
+    <Intro />
+    <ProductCategories items={productCategories} />
+    <CompanyValues items={values} />
+    <Principals items={principals} />
     <Contact />
   </>
 );
@@ -24,6 +24,8 @@ const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => (
 export default Home;
 
 export const getStaticProps: GetStaticProps<HomeConfig> = async () => {
-  const props = getData<HomeConfig>('home');
-  return { props };
+  const productCategories = getData<ProductCategory[]>('product-categories');
+  const values = getData<CompanyValue[]>('company-values');
+  const principals = getData<PrincipalLogo[]>('principals');
+  return { props: { productCategories, values, principals } };
 };
