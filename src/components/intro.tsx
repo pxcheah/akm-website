@@ -9,8 +9,8 @@ const Intro = () => (
         align={{ base: 'left', md: 'center' }}
         color="gray.300"
       >
-        We're a chemical raw material supplier based in Malaysia, offering the finest products from well-established
-        principals worldwide.
+        We&apos;re a chemical raw material supplier based in Malaysia, offering the finest products from
+        well-established principals worldwide.
       </Text>
     </Container>
   </Center>

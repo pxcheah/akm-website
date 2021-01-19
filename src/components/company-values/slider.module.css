@@ -2,10 +2,6 @@
   overflow: visible;
 }
 
-.pagination {
-  display: block;
-}
-
 .bullet {
   display: inline-block;
   width: 0.5rem;
