@@ -1,27 +1,27 @@
 [
   {
-    "image": "/images/our-focus/commitment.svg",
+    "image": "/images/values/commitment.svg",
     "title": "Commitment",
     "description": "We develop relationships that make a positive difference in our customers' lives."
   },
   {
-    "image": "/images/our-focus/quality.svg",
+    "image": "/images/values/quality.svg",
     "title": "Quality",
     "description": "We supply outstanding materials and unsurpassed services that, together, deliver premium value to our customers."
   },
   {
-    "image": "/images/our-focus/integrity.svg",
+    "image": "/images/values/integrity.svg",
     "title": "Integrity",
     "description": "We uphold the highest standards of integrity in all of our actions.",
     "shadowOffset": -2
   },
   {
-    "image": "/images/our-focus/teamwork.svg",
+    "image": "/images/values/teamwork.svg",
     "title": "Teamwork",
     "description": "We work together, across boundaries, to meet the needs of our customers and to help the company win."
   },
   {
-    "image": "/images/our-focus/growth.svg",
+    "image": "/images/values/growth.svg",
     "title": "Growth",
     "description": "We value our people, encourage their development and reward their performance."
   }

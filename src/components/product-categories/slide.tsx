@@ -16,9 +16,10 @@ const ProductCategorySlide = ({ bg, name, image, imageAlt }: ProductCategory) =>
       src={image}
       alt={imageAlt}
       maxW="80%"
-      maxH="80%"
+      maxH="75%"
       transition="ease 200ms opacity"
       userSelect="none"
+      loading="lazy"
       _groupHover={{ opacity: { base: 1, xl: 0.2 } }}
     />
     <Center
@@ -33,6 +34,7 @@ const ProductCategorySlide = ({ bg, name, image, imageAlt }: ProductCategory) =>
       _groupHover={{ opacity: 1 }}
     >
       <Heading
+        as="h3"
         size="lg"
         w={{ base: '90%', md: '85%', xl: '100%' }}
         color="white"

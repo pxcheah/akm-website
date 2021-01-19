@@ -54,3 +54,5 @@ const colors = {
 };
 
 export default colors;
+
+// EXPLORE: #5147ff + #ff6969, #3028be

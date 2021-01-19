@@ -22,7 +22,7 @@ const ValueSlide: FunctionComponent<SlideProps> = ({ image, title, description, 
     <Box w={32} p={4}>
       <Box pos="relative" left={shadowOffset} h={3} borderRadius="100%" bg="purple.600" opacity="0.4" />
     </Box>
-    <Heading mt={8} size="md">
+    <Heading as="h3" mt={8} size="md">
       {title}
     </Heading>
     <Text mt={4}>{description}</Text>
