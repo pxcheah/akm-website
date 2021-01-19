@@ -13,7 +13,7 @@ const ProductCategories = (props: ProductCategoriesProps) => (
       <Text mt={{ base: 4, lg: 6 }} fontSize="lg">
         Discover our vast range of products
       </Text>
-      <Box my={{ base: 8, lg: 16 }}>
+      <Box mt={{ base: 8, lg: 16 }}>
         <ProductCategorySlider {...props} />
       </Box>
     </Container>

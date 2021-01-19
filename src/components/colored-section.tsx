@@ -12,7 +12,7 @@ const ColoredSection: FunctionComponent<SectionProps> = ({ bg, heading, children
       <Heading as="h2" size="xl" color="white">
         {heading}
       </Heading>
-      <Box mt={{ base: 16, lg: 24 }} mb={{ base: 8, lg: 16 }}>
+      <Box mt={{ base: 16, lg: 24 }} mb={8}>
         {children}
       </Box>
     </Container>

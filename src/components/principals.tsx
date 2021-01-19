@@ -1,4 +1,4 @@
-import { Flex, Grid, Image, useMediaQuery, useToken } from '@chakra-ui/react';
+import { Flex, Grid, Image, useBreakpointValue, useMediaQuery, useToken } from '@chakra-ui/react';
 
 import { PrincipalLogo } from '@/types/home';
 import ColoredSection from './colored-section';
@@ -15,18 +15,22 @@ const Principals = ({ items }: PrincipalsProps) => {
     if (isTablet) return !hideInTablet;
     return true;
   });
+  const imageWidth = useBreakpointValue({ base: '120px', lg: '160px' });
+  const imageHeight = useBreakpointValue({ base: '52px', lg: '70px' });
 
   return (
     <ColoredSection bg="purple.600" heading="Our principals">
-      <Grid
-        px={4}
-        templateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)', xl: 'repeat(5, 1fr)' }}
-        rowGap={{ base: 16, xl: 24 }}
-        columnGap={{ base: 8, xl: 16 }}
-      >
+      <Grid templateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)', xl: 'repeat(5, 1fr)' }}>
         {displayItems.map(({ name, logo }, index) => (
-          <Flex key={index} maxH="4.5rem" align="center" justify="center" userSelect="none">
-            <Image maxH="100%" src={logo} alt={name} />
+          <Flex key={index} h={{ base: 32, xl: 40 }} align="center" justify="center" userSelect="none">
+            <Image
+              src={logo}
+              alt={name}
+              maxW={imageWidth}
+              htmlWidth={imageWidth}
+              htmlHeight={imageHeight}
+              loading="lazy"
+            />
           </Flex>
         ))}
       </Grid>
