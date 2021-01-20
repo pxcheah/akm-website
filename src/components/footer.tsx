@@ -1,7 +1,7 @@
 import { Box, Container, Text } from '@chakra-ui/react';
 
 const Footer = () => (
-  <Box as="footer">
+  <Box as="footer" mt="auto">
     <Box bgGradient="linear(to-r, blue.600, purple.600)" h={1} />
     <Container maxW="container.xl" py={8} px={{ base: 8, md: 12 }}>
       <Text fontSize="xs">

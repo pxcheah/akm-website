@@ -17,10 +17,10 @@ const ProductCategorySlide = ({ bg, name, image, imageAlt }: ProductCategory) =>
       alt={imageAlt}
       maxW="80%"
       maxH="75%"
-      transition="ease 200ms opacity"
+      transition="ease 200ms all"
       userSelect="none"
       loading="lazy"
-      _groupHover={{ opacity: { base: 1, xl: 0.2 } }}
+      _groupHover={{ opacity: { base: 1, xl: 0.2 }, transform: 'scale(1.05)' }}
     />
     <Center
       pos="absolute"

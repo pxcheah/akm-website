@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import { ChakraProvider } from '@chakra-ui/react';
+import { ChakraProvider, Flex } from '@chakra-ui/react';
 import 'swiper/swiper.min.css';
 import 'swiper/components/pagination/pagination.min.css';
 
@@ -15,10 +15,12 @@ function App({ Component, pageProps }: AppProps) {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
       </Head>
-      <main>
-        <Component {...pageProps} />
-      </main>
-      <Footer />
+      <Flex direction="column" minH="100vh">
+        <main>
+          <Component {...pageProps} />
+        </main>
+        <Footer />
+      </Flex>
     </ChakraProvider>
   );
 }
