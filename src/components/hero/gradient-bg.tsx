@@ -1,13 +1,8 @@
 import type { FunctionComponent } from 'react';
-import { Box, Image, keyframes, useBreakpointValue, useTheme } from '@chakra-ui/react';
+import { Box, Image, keyframes, useBreakpointValue, useToken } from '@chakra-ui/react';
 
 const GradientBg: FunctionComponent = ({ children }) => {
-  const { colors } = useTheme();
-  const {
-    teal: { 300: teal },
-    blue: { 600: blue },
-    purple: { 500: purple },
-  } = colors;
+  const [teal, blue, purple] = useToken('colors', ['teal.300', 'blue.600', 'purple.500']);
   const gradient = keyframes`
     0% {
       background-position: 0% 50%;

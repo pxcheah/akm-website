@@ -1,15 +1,19 @@
 import Link from 'next/link';
 import { Flex, Heading, Image, useBreakpointValue } from '@chakra-ui/react';
 
-const Brand = () => {
+interface BrandProps {
+  white?: boolean;
+}
+
+const Brand = ({ white }: BrandProps) => {
   const dimension = useBreakpointValue({ base: 48, md: 64 });
   return (
     <Link href="/">
-      <Flex align="center" color="white" cursor="pointer" userSelect="none">
+      <Flex align="center" color={white ? 'white' : 'black'} cursor="pointer" userSelect="none">
         <Image
-          src="/images/akm-white.svg"
+          src={white ? '/images/akm-white.svg' : '/images/akm.svg'}
           alt="Alsey Kimia"
-          boxSize={{ base: 12, md: 16 }}
+          boxSize={white ? { base: 12, md: 16 } : 12}
           htmlHeight={dimension}
           htmlWidth={dimension}
         />

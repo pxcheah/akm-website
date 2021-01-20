@@ -6,7 +6,7 @@ type ProductCategoriesProps = ProductCategorySliderProps;
 
 const ProductCategories = (props: ProductCategoriesProps) => (
   <Box as="section" mt={8} mb={{ base: 20, lg: 24 }} overflow="hidden">
-    <Container maxW="container.xl" px={{ base: 8, md: 12 }}>
+    <Container>
       <Heading as="h2" size="xl">
         Our products
       </Heading>

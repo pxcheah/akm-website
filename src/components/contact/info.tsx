@@ -1,7 +1,8 @@
-import { Box, Link, Stack, Text } from '@chakra-ui/react';
+import { Box, Link, Stack, StackProps, Text } from '@chakra-ui/react';
 
-const ContactInfo = () => (
-  <Stack mt={8} spacing={6}>
+const ContactInfo = (props: StackProps) => (
+  <Stack mt={8} spacing={6} {...props}>
+    <Text d={{ lg: 'none' }}>Alternatively, you can reach us via:</Text>
     <Box>
       <Text fontWeight="bold">Phone</Text>
       <Link href="tel:+60358829455">+603 5882 9455</Link>

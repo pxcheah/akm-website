@@ -8,7 +8,7 @@ interface SectionProps {
 
 const ColoredSection: FunctionComponent<SectionProps> = ({ bg, heading, children }) => (
   <Box as="section" bg={bg} overflow="hidden">
-    <Container maxW="container.xl" py={{ base: 20, md: 24 }} px={{ base: 8, md: 12 }}>
+    <Container py={{ base: 20, md: 24 }}>
       <Heading as="h2" size="xl" color="white">
         {heading}
       </Heading>

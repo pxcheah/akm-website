@@ -1,5 +1,5 @@
-import { Box, Button, FormControl, FormErrorMessage, Input, Textarea, VStack } from '@chakra-ui/react';
-import { useState } from 'react';
+import { Box, Button, Collapse, FormControl, FormErrorMessage, Input, Text, Textarea, VStack } from '@chakra-ui/react';
+import { useCallback, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 import { emailRegex } from '@/constants/regex';
@@ -10,17 +10,36 @@ interface FormData {
   message: string;
 }
 
-const ContactForm = () => {
-  const { register, handleSubmit, errors } = useForm<FormData>();
-  const [isSending, setIsSending] = useState(false);
+enum SubmissionProgress {
+  Idle,
+  Submitting,
+  Submitted,
+}
 
-  const onSubmit = handleSubmit((data: FormData) => {
-    console.log({ data });
-    setIsSending(true);
-    setTimeout(() => {
-      setIsSending(false);
-    }, 3000);
-  });
+const ContactForm = () => {
+  const { register, handleSubmit, errors, reset } = useForm<FormData>();
+  const [progress, setProgress] = useState<SubmissionProgress>(SubmissionProgress.Idle);
+  const [isFormSuccess, setIsFormSuccess] = useState(false);
+
+  const onSubmit = useCallback(
+    handleSubmit((data: FormData) => {
+      console.log({ data });
+      setProgress(SubmissionProgress.Submitting);
+      window.setTimeout(() => {
+        setProgress(SubmissionProgress.Submitted);
+        if (data.message === 'ok') {
+          setIsFormSuccess(true);
+          reset();
+        } else {
+          setIsFormSuccess(false);
+        }
+        window.setTimeout(() => {
+          setProgress(SubmissionProgress.Idle);
+        }, 3000);
+      }, 3000);
+    }),
+    [reset]
+  );
 
   return (
     <Box
@@ -85,11 +104,16 @@ const ContactForm = () => {
         mt={8}
         borderRadius={0}
         colorScheme="purple"
-        isLoading={isSending}
+        isLoading={progress === SubmissionProgress.Submitting}
         loadingText="Sending"
       >
         Send
       </Button>
+      <Collapse in={progress === SubmissionProgress.Submitted}>
+        <Text pt={2} fontSize="sm" color={isFormSuccess ? 'green.500' : 'red.500'}>
+          {isFormSuccess ? 'We have received your message, thank you.' : 'Something went wrong, please try again.'}
+        </Text>
+      </Collapse>
     </Box>
   );
 };

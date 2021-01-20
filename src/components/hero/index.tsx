@@ -7,7 +7,7 @@ import Tagline from './tagline';
 const Hero = () => (
   <GradientBg>
     <Box pos="absolute" top={8} left={{ base: 8, md: 12 }}>
-      <Brand />
+      <Brand white />
     </Box>
     <Center h="100vh">
       <Tagline />
