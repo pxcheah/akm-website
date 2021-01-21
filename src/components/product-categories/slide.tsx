@@ -1,4 +1,4 @@
-import { Box, Center, Heading, Image } from '@chakra-ui/react';
+import { Box, Center, Heading } from '@chakra-ui/react';
 
 import { ProductCategory } from '@/types/home';
 

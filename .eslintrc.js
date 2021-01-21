@@ -5,6 +5,7 @@ module.exports = {
   },
   rules: {
     'import/prefer-default-export': 'off',
+    'jsx-a11y/anchor-is-valid': 'warn',
     'react/jsx-props-no-spreading': 'off',
     'react/no-array-index-key': 'off',
     'react/prop-types': 'off',
