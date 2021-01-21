@@ -15,6 +15,7 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <Head>
+        <meta name="robots" content="noindex,nofollow" />
         <title>Alsey Kimia | Industrial Chemicals Supplier</title>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
