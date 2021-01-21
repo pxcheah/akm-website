@@ -62,37 +62,40 @@ const ContactForm = () => {
       <VStack spacing={4}>
         <FormControl isInvalid={!!errors.name}>
           <Input
+            ref={register({ required: true })}
             borderRadius={0}
             placeholder="Name"
             name="name"
             autoComplete="name"
-            ref={register({ required: true })}
+            aria-label="name"
           />
           {errors.name && <FormErrorMessage>Please enter your name</FormErrorMessage>}
         </FormControl>
         <FormControl isInvalid={!!errors.email}>
           <Input
+            ref={register({
+              required: true,
+              pattern: emailRegex,
+            })}
             borderRadius={0}
             placeholder="Email"
             name="email"
             type="email"
             inputMode="email"
             autoComplete="email"
-            ref={register({
-              required: true,
-              pattern: emailRegex,
-            })}
+            aria-label="email"
           />
           {errors.email && <FormErrorMessage>Please enter a valid email</FormErrorMessage>}
         </FormControl>
         <FormControl isInvalid={!!errors.message}>
           <Textarea
+            ref={register({ required: true })}
             borderRadius={0}
             placeholder="Message"
             rows={12}
             resize="vertical"
             name="message"
-            ref={register({ required: true })}
+            aria-label="message"
           />
           {errors.message && <FormErrorMessage>Message is required</FormErrorMessage>}
         </FormControl>

@@ -1,5 +1,6 @@
 import type { FunctionComponent } from 'react';
-import { Box, Image, keyframes, useBreakpointValue, useToken } from '@chakra-ui/react';
+import { Box, keyframes, useBreakpointValue, useToken } from '@chakra-ui/react';
+import Pattern from './pattern';
 
 const GradientBg: FunctionComponent = ({ children }) => {
   const [teal, blue, purple] = useToken('colors', ['teal.300', 'blue.600', 'purple.500']);
@@ -51,9 +52,7 @@ const GradientBg: FunctionComponent = ({ children }) => {
       animation={`${gradient} 30s ease infinite`}
       overflow="hidden"
     >
-      <Box pos="absolute" userSelect="none" pointerEvents="none" {...patternPosition}>
-        <Image src="/images/akm-white.svg" opacity={0.1} />
-      </Box>
+      <Pattern pos="absolute" {...patternPosition} />
       {children}
     </Box>
   );

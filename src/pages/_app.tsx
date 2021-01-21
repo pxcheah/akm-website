@@ -17,6 +17,10 @@ function App({ Component, pageProps }: AppProps) {
       <Head>
         <meta name="robots" content="noindex,nofollow" />
         <title>Alsey Kimia | Industrial Chemicals Supplier</title>
+        <meta
+          name="description"
+          content="Alsey Kimia is a chemical raw material supplier based in Malaysia. We offer the finest products from well-established principals worldwide."
+        />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
       </Head>
