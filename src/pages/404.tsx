@@ -5,7 +5,12 @@ const NotFound = () => (
   <Container>
     <Flex align="center" my={20}>
       <Box>
-        <Heading>Oops... 👻</Heading>
+        <Heading>
+          Oops...&nbsp;
+          <span role="img" aria-label="ghost">
+            👻
+          </span>
+        </Heading>
         <Text mt={{ base: 4, lg: 6 }} mb={12}>
           Sorry, the page you are looking for doesn&apos;t exist
         </Text>
@@ -21,7 +26,7 @@ const NotFound = () => (
         maxW="60%"
         h="500px"
         ml={16}
-        src={`/images/404.svg`}
+        src="/images/404.svg"
         alt="404 - Page not found"
         loading="lazy"
       />

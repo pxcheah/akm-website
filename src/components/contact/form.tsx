@@ -23,7 +23,7 @@ const ContactForm = () => {
 
   const onSubmit = useCallback(
     handleSubmit((data: FormData) => {
-      console.log({ data });
+      // console.log({ data });
       setProgress(SubmissionProgress.Submitting);
       window.setTimeout(() => {
         setProgress(SubmissionProgress.Submitted);

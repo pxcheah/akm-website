@@ -1,5 +1,4 @@
-import { Box, Container, Flex, Image } from '@chakra-ui/react';
-import Link from 'next/link';
+import { Box, Container, Flex } from '@chakra-ui/react';
 import Brand from './hero/brand';
 
 const Header = () => (

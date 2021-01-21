@@ -9,5 +9,6 @@ module.exports = {
     'react/no-array-index-key': 'off',
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
+    'react/require-default-props': 'off',
   },
 };
