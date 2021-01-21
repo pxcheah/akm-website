@@ -1,7 +1,10 @@
 export interface ProductCategory {
   bg: string;
   name: string;
-  image: string;
+  image: {
+    webp: string;
+    png: string;
+  };
   imageAlt?: string;
 }
 

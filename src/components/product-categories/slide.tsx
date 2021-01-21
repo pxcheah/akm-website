@@ -1,4 +1,4 @@
-import { Center, Heading, Image } from '@chakra-ui/react';
+import { Box, Center, Heading, Image } from '@chakra-ui/react';
 
 import { ProductCategory } from '@/types/home';
 
@@ -12,16 +12,18 @@ const ProductCategorySlide = ({ bg, name, image, imageAlt }: ProductCategory) =>
     _hover={{ boxShadow: 'xl' }}
     role="group"
   >
-    <Image
-      src={image}
-      alt={imageAlt}
-      maxW="80%"
-      maxH="75%"
+    <Box
+      maxW={{ base: '90%', xl: '80%' }}
+      maxH="80%"
       transition="ease 200ms all"
       userSelect="none"
-      loading="lazy"
       _groupHover={{ opacity: { base: 1, xl: 0.2 }, transform: 'scale(1.05)' }}
-    />
+    >
+      <picture>
+        <source type="image/webp" srcSet={image.webp} />
+        <img src={image.png} alt={imageAlt} loading="lazy" />
+      </picture>
+    </Box>
     <Center
       pos="absolute"
       w="full"

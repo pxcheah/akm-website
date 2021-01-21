@@ -8,6 +8,7 @@ interface FormData {
   name: string;
   email: string;
   message: string;
+  lastName: string; // honeypot
 }
 
 enum SubmissionProgress {
@@ -23,7 +24,9 @@ const ContactForm = () => {
 
   const onSubmit = useCallback(
     handleSubmit((data: FormData) => {
-      // console.log({ data });
+      // anti-bot
+      if (data.lastName) return;
+
       setProgress(SubmissionProgress.Submitting);
       window.setTimeout(() => {
         setProgress(SubmissionProgress.Submitted);
@@ -59,6 +62,7 @@ const ContactForm = () => {
         bgGradient: 'linear(to-r, blue.400, purple.600)',
       }}
     >
+      <Input d="none" ref={register()} name="lastName" aria-label="last name" />
       <VStack spacing={4}>
         <FormControl isInvalid={!!errors.name}>
           <Input

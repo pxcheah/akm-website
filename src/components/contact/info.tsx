@@ -24,14 +24,7 @@ const ContactInfo = (props: StackProps) => (
         <br />
         47100 Puchong, Selangor, Malaysia
       </Text>
-      <Link
-        href="https://goo.gl/maps/iqCU5KShD63pBRqS7"
-        isExternal
-        color="blue.600"
-        textDecoration="underline"
-        transition="ease 200ms color"
-        _hover={{ color: 'blue.700' }}
-      >
+      <Link href="https://goo.gl/maps/iqCU5KShD63pBRqS7" isExternal color="purple.700" textDecoration="underline">
         See map
       </Link>
     </Box>

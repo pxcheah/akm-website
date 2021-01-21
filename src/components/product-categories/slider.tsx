@@ -1,4 +1,5 @@
-import { HStack, Image } from '@chakra-ui/react';
+import { Flex, HStack, Image, Link } from '@chakra-ui/react';
+import NextLink from 'next/link';
 import SwiperCore, { Lazy, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -30,28 +31,35 @@ const ProductCategorySlider = ({ items }: ProductCategorySliderProps) => (
         </SwiperSlide>
       ))}
     </Swiper>
-    <HStack spacing={2} mt={6}>
-      <Image
-        src="/images/arrow-left-circle.svg"
-        alt="Previous"
-        className="product-slider-prev"
-        w={12}
-        htmlWidth="48"
-        htmlHeight="48"
-        cursor="pointer"
-        transition="ease 200ms opacity"
-      />
-      <Image
-        src="/images/arrow-right-circle.svg"
-        alt="Next"
-        className="product-slider-next"
-        w={12}
-        htmlWidth="48"
-        htmlHeight="48"
-        cursor="pointer"
-        transition="ease 200ms opacity"
-      />
-    </HStack>
+    <Flex mt={6} justify="space-between">
+      <HStack spacing={2}>
+        <Image
+          src="/images/arrow-left-circle.svg"
+          alt="Previous"
+          className="product-slider-prev"
+          w={12}
+          htmlWidth="48"
+          htmlHeight="48"
+          cursor="pointer"
+          transition="ease 200ms opacity"
+        />
+        <Image
+          src="/images/arrow-right-circle.svg"
+          alt="Next"
+          className="product-slider-next"
+          w={12}
+          htmlWidth="48"
+          htmlHeight="48"
+          cursor="pointer"
+          transition="ease 200ms opacity"
+        />
+      </HStack>
+      <NextLink href="/products" passHref>
+        <Link color="purple.700" textDecoration="underline">
+          All products
+        </Link>
+      </NextLink>
+    </Flex>
   </>
 );
 
