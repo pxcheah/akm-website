@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "npm run pretty && npm run lint && next build",
     "export": "next export",
-    "pretty": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "pretty": "prettier --write \"src/**/*.{ts,tsx}\" --loglevel warn",
     "lint": "eslint src --fix"
   },
   "dependencies": {
