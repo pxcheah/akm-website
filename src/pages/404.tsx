@@ -28,7 +28,6 @@ const NotFound = () => (
         ml={16}
         src="/images/404.svg"
         alt="404 - Page not found"
-        loading="lazy"
       />
     </Flex>
   </Container>

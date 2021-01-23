@@ -1,6 +1,4 @@
-const fonts = {
+export default {
   body: "'Poppins', sans-serif",
   heading: "'Poppins', sans-serif",
 };
-
-export default fonts;

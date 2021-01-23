@@ -52,11 +52,6 @@ const ProductCategorySlider = ({ items }: ProductCategorySliderProps) => (
         transition="ease 200ms opacity"
       />
     </HStack>
-    {/* <NextLink href="/products" passHref>
-      <Link color="purple.700" textDecoration="underline">
-        All products
-      </Link>
-    </NextLink> */}
   </>
 );
 

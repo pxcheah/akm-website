@@ -1,7 +1,7 @@
 // https://coolors.co/2a2d34-7e3ce7-23d5ab-009ddc-f26430
 // logo color: #226993
 
-const colors = {
+export default {
   black: '#2a2d34',
   // orange: {
   //   50: '#f8eae8',
@@ -52,7 +52,5 @@ const colors = {
     900: '#3a16c7',
   },
 };
-
-export default colors;
 
 // EXPLORE: #5147ff + #ff6969, #3028be

@@ -7,6 +7,7 @@ import 'swiper/components/pagination/pagination.min.css';
 
 import Header from '@/components/header';
 import Footer from '@/components/footer';
+import structuredData from '@/constants/structuredData';
 import theme from '../theme';
 
 function App({ Component, pageProps }: AppProps) {
@@ -28,6 +29,7 @@ function App({ Component, pageProps }: AppProps) {
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/manifest.json" />
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Head>
       <Flex direction="column" minH="100vh">
         {!isLanding && <Header />}
