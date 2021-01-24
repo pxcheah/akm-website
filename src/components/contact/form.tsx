@@ -6,7 +6,8 @@ import { emailRegex } from '@/constants/regex';
 
 interface FormData {
   name: string;
-  email: string;
+  company: string;
+  email: string; // email
   message: string;
   lastName: string; // honeypot
 }
@@ -23,10 +24,9 @@ const ContactForm = () => {
   const [isFormSuccess, setIsFormSuccess] = useState(false);
 
   const onSubmit = useCallback(
-    handleSubmit((data: FormData) => {
+    handleSubmit(async (data: FormData) => {
       // anti-bot
       if (data.lastName) return;
-
       setProgress(SubmissionProgress.Submitting);
       window.setTimeout(() => {
         setProgress(SubmissionProgress.Submitted);
@@ -40,6 +40,27 @@ const ContactForm = () => {
           setProgress(SubmissionProgress.Idle);
         }, 3000);
       }, 3000);
+
+      // setProgress(SubmissionProgress.Submitting);
+      // const body = {
+      //   ...data,
+      //   _subject: `Web form - ${data.name}`,
+      // };
+      // try {
+      //   await fetch('https://mailthis.to/alexanderjobs', {
+      //     method: 'post',
+      //     body: JSON.stringify(body),
+      //   });
+      //   setIsFormSuccess(true);
+      // } catch (e) {
+      //   console.error(e);
+      //   setIsFormSuccess(false);
+      // } finally {
+      //   setProgress(SubmissionProgress.Submitted);
+      //   window.setTimeout(() => {
+      //     setProgress(SubmissionProgress.Idle);
+      //   }, 3000);
+      // }
     }),
     [reset]
   );
@@ -62,7 +83,7 @@ const ContactForm = () => {
         bgGradient: 'linear(to-r, blue.400, purple.600)',
       }}
     >
-      <Input d="none" ref={register()} name="lastName" aria-label="last name" />
+      {/* <Input d="none" ref={register()} name="lastName" aria-label="last name" /> */}
       <VStack spacing={4}>
         <FormControl isInvalid={!!errors.name}>
           <Input
@@ -72,8 +93,20 @@ const ContactForm = () => {
             name="name"
             autoComplete="name"
             aria-label="name"
+            size="sm"
           />
           {errors.name && <FormErrorMessage>Please enter your name</FormErrorMessage>}
+        </FormControl>
+        <FormControl>
+          <Input
+            ref={register()}
+            borderRadius={0}
+            placeholder="Company name (optional)"
+            name="company"
+            autoComplete="company"
+            aria-label="company"
+            size="sm"
+          />
         </FormControl>
         <FormControl isInvalid={!!errors.email}>
           <Input
@@ -83,11 +116,12 @@ const ContactForm = () => {
             })}
             borderRadius={0}
             placeholder="Email"
-            name="email"
+            name="_replyto"
             type="email"
             inputMode="email"
             autoComplete="email"
             aria-label="email"
+            size="sm"
           />
           {errors.email && <FormErrorMessage>Please enter a valid email</FormErrorMessage>}
         </FormControl>
@@ -100,10 +134,12 @@ const ContactForm = () => {
             resize="vertical"
             name="message"
             aria-label="message"
+            size="sm"
           />
           {errors.message && <FormErrorMessage>Message is required</FormErrorMessage>}
         </FormControl>
       </VStack>
+      <input type="hidden" ref={register()} name="_honeypot" />
       <Button
         type="submit"
         size="lg"
