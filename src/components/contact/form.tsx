@@ -56,10 +56,11 @@ const ContactForm = () => {
       //   console.error(e);
       //   setIsFormSuccess(false);
       // } finally {
-      //   setProgress(SubmissionProgress.Submitted);
-      //   window.setTimeout(() => {
-      //     setProgress(SubmissionProgress.Idle);
-      //   }, 3000);
+      //   window.location.href = 'https://mailthis.to/confirm';
+      //   // setProgress(SubmissionProgress.Submitted);
+      //   // window.setTimeout(() => {
+      //   //   setProgress(SubmissionProgress.Idle);
+      //   // }, 3000);
       // }
     }),
     [reset]

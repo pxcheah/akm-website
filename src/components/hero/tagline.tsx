@@ -5,7 +5,7 @@ const Tagline = () => (
     <Text fontSize={{ base: 'xl', md: '3xl' }} align={{ md: 'center' }} opacity="0.85">
       Need industrial chemicals?
     </Text>
-    <Text fontSize={{ base: '36px', md: '5xl' }} align={{ md: 'center' }}>
+    <Text fontSize={{ base: '4xl', md: '5xl' }} align={{ md: 'center' }}>
       We&apos;ve got you covered!
     </Text>
   </Container>
