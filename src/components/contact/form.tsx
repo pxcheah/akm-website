@@ -36,32 +36,7 @@ const ContactForm = () => {
         } else {
           setIsFormSuccess(false);
         }
-        window.setTimeout(() => {
-          setProgress(SubmissionProgress.Idle);
-        }, 3000);
       }, 3000);
-
-      // setProgress(SubmissionProgress.Submitting);
-      // const body = {
-      //   ...data,
-      //   _subject: `Web form - ${data.name}`,
-      // };
-      // try {
-      //   await fetch('https://mailthis.to/alexanderjobs', {
-      //     method: 'post',
-      //     body: JSON.stringify(body),
-      //   });
-      //   setIsFormSuccess(true);
-      // } catch (e) {
-      //   console.error(e);
-      //   setIsFormSuccess(false);
-      // } finally {
-      //   window.location.href = 'https://mailthis.to/confirm';
-      //   // setProgress(SubmissionProgress.Submitted);
-      //   // window.setTimeout(() => {
-      //   //   setProgress(SubmissionProgress.Idle);
-      //   // }, 3000);
-      // }
     }),
     [reset]
   );
@@ -84,7 +59,6 @@ const ContactForm = () => {
         bgGradient: 'linear(to-r, blue.400, purple.600)',
       }}
     >
-      {/* <Input d="none" ref={register()} name="lastName" aria-label="last name" /> */}
       <VStack spacing={4}>
         <FormControl isInvalid={!!errors.name}>
           <Input
@@ -117,7 +91,7 @@ const ContactForm = () => {
             })}
             borderRadius={0}
             placeholder="Email"
-            name="_replyto"
+            name="email"
             type="email"
             inputMode="email"
             autoComplete="email"
@@ -140,7 +114,7 @@ const ContactForm = () => {
           {errors.message && <FormErrorMessage>Message is required</FormErrorMessage>}
         </FormControl>
       </VStack>
-      <input type="hidden" ref={register()} name="_honeypot" />
+      <input type="hidden" ref={register()} name="lastName" />
       <Button
         type="submit"
         size="lg"
