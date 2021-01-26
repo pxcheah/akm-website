@@ -12,6 +12,13 @@ interface FormData {
   lastName: string; // honeypot
 }
 
+interface FormResponse {
+  success?: boolean;
+  messageId?: string;
+  code?: number;
+  message?: string;
+}
+
 enum SubmissionProgress {
   Idle,
   Submitting,
@@ -27,16 +34,29 @@ const ContactForm = () => {
     handleSubmit(async (data: FormData) => {
       // anti-bot
       if (data.lastName) return;
+
       setProgress(SubmissionProgress.Submitting);
-      window.setTimeout(() => {
-        setProgress(SubmissionProgress.Submitted);
-        if (data.message === 'ok') {
+      try {
+        const { lastName, ...params } = data;
+        const response = await fetch('https://hu3zkeqwn1.execute-api.ap-southeast-1.amazonaws.com/prod/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(params),
+        });
+        const result = (await response.json()) as FormResponse;
+        if (result.success) {
           setIsFormSuccess(true);
           reset();
         } else {
           setIsFormSuccess(false);
         }
-      }, 3000);
+      } catch (e) {
+        setIsFormSuccess(false);
+      } finally {
+        setProgress(SubmissionProgress.Submitted);
+      }
     }),
     [reset]
   );
