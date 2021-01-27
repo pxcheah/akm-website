@@ -25,7 +25,7 @@ const Contact = () => {
   }, [animation, inView]);
 
   return (
-    <Container as="section" py={{ base: 20, md: 24 }}>
+    <Container as="section" py={{ base: 20, md: 24 }} overflow="hidden">
       <Stack ref={ref} direction={{ base: 'column', lg: 'row' }} spacing={{ base: 8, lg: 16 }}>
         <MotionBox
           animate={animation}
