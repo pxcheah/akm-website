@@ -28,7 +28,7 @@ module.exports = (phase) => {
           generateSitemap();
         }
         console.log(`info  - Generating robots...`);
-        generateRobots();
+        generateRobots(isProduction);
       }
       return config;
     },
