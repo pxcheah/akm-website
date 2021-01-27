@@ -16,12 +16,41 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <Head>
-        <meta name="robots" content="noindex,nofollow" />
+        {/* Global site tag (gtag.js) - Google Analytics */}
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_ID}`} />
+        <script
+          /* eslint-disable-next-line react/no-danger */
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${process.env.GA_ID}');
+            `,
+          }}
+        />
+        <meta name="robots" content={process.env.ROBOTS} />
         <title>Alsey Kimia | Industrial Chemicals Supplier</title>
         <meta
           name="description"
           content="Alsey Kimia is a chemical raw material supplier based in Malaysia. We offer the finest products from well-established principals worldwide."
         />
+        <meta property="og:url" content="https://www.alseykimia.com.my" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Alsey Kimia | Industrial Chemical Supplier" />
+        <meta
+          property="og:description"
+          content="Alsey Kimia is a chemical raw material supplier based in Malaysia. We offer the finest products from well-established principals worldwide."
+        />
+        <meta property="og:image" content="/icon-192x192.png" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Alsey Kimia | Industrial Chemicals Supplier" />
+        <meta
+          name="twitter:description"
+          content="Alsey Kimia is a chemical raw material supplier based in Malaysia. We offer the finest products from well-established principals worldwide."
+        />
+        <meta name="twitter:image" content="/icon-192x192.png" />
+
         <meta name="theme-color" content="#009ddc" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />

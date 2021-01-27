@@ -38,7 +38,7 @@ const ContactForm = () => {
       setProgress(SubmissionProgress.Submitting);
       try {
         const { lastName, ...params } = data;
-        const response = await fetch('https://hu3zkeqwn1.execute-api.ap-southeast-1.amazonaws.com/prod/contact', {
+        const response = await fetch(`${process.env.API_ENDPOINT}/contact`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -65,7 +65,6 @@ const ContactForm = () => {
     <Box
       as="form"
       onSubmit={onSubmit}
-      flexGrow={1}
       p={{ base: 6, lg: 8 }}
       pos="relative"
       boxShadow="xl"
