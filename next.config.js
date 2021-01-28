@@ -1,13 +1,16 @@
-const { PHASE_PRODUCTION_BUILD } = require('next/constants');
 const dotenv = require('dotenv');
 const path = require('path');
+const { PHASE_PRODUCTION_BUILD } = require('next/constants');
 const { generateSitemap } = require('./scripts/sitemap');
 const { generateRobots } = require('./scripts/robots');
 
 module.exports = (phase) => {
-  const isStaging = phase === PHASE_PRODUCTION_BUILD && process.env.BUILD_ENV === 'stg';
-  const isProduction = phase === PHASE_PRODUCTION_BUILD && process.env.BUILD_ENV === 'prod';
-  console.log(`info  - Setup ${isProduction ? 'production' : isStaging ? 'staging' : 'development'} .env`);
+  const isProdBuild = phase === PHASE_PRODUCTION_BUILD;
+  const isStaging = isProdBuild && process.env.BUILD_ENV === 'stg';
+  const isProduction = isProdBuild && process.env.BUILD_ENV === 'prod';
+
+  const buildEnvDisplay = isProduction ? 'production' : isStaging ? 'staging' : 'development';
+  console.log(`info  - Setup ${buildEnvDisplay} environment variables`);
 
   const envPath = path.resolve(
     process.cwd(),
@@ -22,15 +25,16 @@ module.exports = (phase) => {
   return {
     env: env.parsed,
     webpack: (config, { isServer }) => {
-      if (!isServer) {
+      if (isProdBuild && !isServer) {
         if (isProduction) {
-          console.log(`info  - Generating sitemap...`);
+          console.log(`info  - Generating sitemap`);
           generateSitemap();
         }
-        console.log(`info  - Generating robots...`);
+        console.log(`info  - Generating robots`);
         generateRobots(isProduction);
       }
       return config;
     },
+    trailingSlash: isProdBuild,
   };
 };
