@@ -18,7 +18,8 @@ export default {
   },
   image: [
     'https://www.alseykimia.com.my/images/office/office-front-gate.jpg',
-    'https://www.alseykimia.com.my/images/office/drums-1.jpg',
-    'https://www.alseykimia.com.my/images/office/drums-2.jpg',
+    'https://www.alseykimia.com.my/images/office/warehouse-1.jpg',
+    'https://www.alseykimia.com.my/images/office/warehouse-2.jpg',
+    'https://www.alseykimia.com.my/images/office/warehouse-3.jpg',
   ],
 };
