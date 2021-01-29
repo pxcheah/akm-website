@@ -1,6 +1,7 @@
 export default {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
+  '@id': 'https://www.alseykimia.com.my',
   name: 'Alsey Kimia',
   description:
     'We are a chemical raw material supplier based in Malaysia, offering the finest products from well-established principals worldwide.',
@@ -15,4 +16,9 @@ export default {
     addressCountry: 'Malaysia',
     postalCode: '47100',
   },
+  image: [
+    'https://www.alseykimia.com.my/images/office/office-front-gate.jpg',
+    'https://www.alseykimia.com.my/images/office/drums-1.jpg',
+    'https://www.alseykimia.com.my/images/office/drums-2.jpg',
+  ],
 };
