@@ -1,4 +1,5 @@
 export interface ProductCategory {
+  categoryId: string;
   bg: string;
   name: string;
   image: {

@@ -1,5 +1,6 @@
 [
   {
+    "categoryId": "frp",
     "bg": "linear-gradient(34deg, #00aaac, #00c1d1)",
     "name": "Fibre Reinforced Plastics (FRP)",
     "image": {
@@ -9,6 +10,7 @@
     "imageAlt": "Yacht"
   },
   {
+    "categoryId": "polyurethanes",
     "bg": "linear-gradient(60deg, #5e7293, #2d3748)",
     "name": "Polyurethanes (PU)",
     "image": {
@@ -18,6 +20,7 @@
     "imageAlt": "Rigid polyurethane foam for cold rooms"
   },
   {
+    "categoryId": "powder-coatings",
     "bg": "linear-gradient(34deg, #edb9c3, #ffb0bf)",
     "name": "Powder Coatings",
     "image": {
@@ -27,6 +30,7 @@
     "imageAlt": "Cable trunking"
   },
   {
+    "categoryId": "ceramic-coatings",
     "bg": "linear-gradient(146deg, #38a169, #2f855a)",
     "name": "Ceramic Coatings",
     "image": {
@@ -36,6 +40,7 @@
     "imageAlt": "Ceramic tile"
   },
   {
+    "categoryId": "absorbants",
     "bg": "linear-gradient(to right, #ffc179, #f6ad55)",
     "name": "Absorbants",
     "image": {
