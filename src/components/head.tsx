@@ -49,7 +49,7 @@ const Head = () => (
         content="Alsey Kimia is a chemical raw material supplier based in Malaysia. We offer the finest products from well-established principals worldwide."
       />
       <meta name="twitter:image" content="/icon-192x192.png" />
-      <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
 
       {/* Favicons */}
       <meta name="theme-color" content="#009ddc" />
