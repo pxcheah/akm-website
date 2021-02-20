@@ -10,11 +10,11 @@ import CompanyValues from '@/components/company-values';
 import Principals from '@/components/principals';
 import Contact from '@/components/contact';
 
-const Home = ({ productCategories, values, principals }: InferGetStaticPropsType<typeof getStaticProps>) => (
+const Home = ({ categories, values, principals }: InferGetStaticPropsType<typeof getStaticProps>) => (
   <>
     <Hero />
     <Intro />
-    <ProductCategories items={productCategories} />
+    <ProductCategories items={categories} />
     <CompanyValues items={values} />
     <Principals items={principals} />
     <Contact />
@@ -24,8 +24,8 @@ const Home = ({ productCategories, values, principals }: InferGetStaticPropsType
 export default Home;
 
 export const getStaticProps: GetStaticProps<HomeConfig> = async () => {
-  const productCategories = getData<ProductCategory[]>('product-categories');
+  const categories = getData<ProductCategory[]>('categories');
   const values = getData<CompanyValue[]>('company-values');
   const principals = getData<PrincipalLogo[]>('principals');
-  return { props: { productCategories, values, principals } };
+  return { props: { categories, values, principals } };
 };

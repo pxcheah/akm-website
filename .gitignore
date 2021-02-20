@@ -35,3 +35,6 @@ yarn-error.log*
 
 # robots
 /public/robots.txt
+
+# generated json files
+/data/products.json

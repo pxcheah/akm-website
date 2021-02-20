@@ -3,8 +3,8 @@ import { Box, Center, Heading } from '@chakra-ui/react';
 import { ProductCategory } from '@/types/home';
 import Link from 'next/link';
 
-const ProductCategorySlide = ({ categoryId, bg, name, image, imageAlt }: ProductCategory) => (
-  <Link href={`/${categoryId}`}>
+const ProductCategorySlide = ({ bg, name, abbreviation, imageWebp, imagePng, imageAlt, url }: ProductCategory) => (
+  <Link href={url}>
     <Center
       pos="relative"
       h={96}
@@ -23,8 +23,8 @@ const ProductCategorySlide = ({ categoryId, bg, name, image, imageAlt }: Product
         _groupHover={{ opacity: { base: 1, xl: 0.2 }, transform: 'scale(1.05)' }}
       >
         <picture>
-          <source type="image/webp" srcSet={image.webp} />
-          <img src={image.png} alt={imageAlt} loading="lazy" />
+          <source type="image/webp" srcSet={imageWebp} />
+          <img src={imagePng} alt={imageAlt} loading="lazy" />
         </picture>
       </Box>
       <Center
@@ -47,6 +47,7 @@ const ProductCategorySlide = ({ categoryId, bg, name, image, imageAlt }: Product
           userSelect="none"
         >
           {name}
+          {abbreviation && <>&nbsp;({abbreviation})</>}
         </Heading>
       </Center>
     </Center>

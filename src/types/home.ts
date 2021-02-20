@@ -1,12 +1,12 @@
 export interface ProductCategory {
   categoryId: string;
-  bg: string;
   name: string;
-  image: {
-    webp: string;
-    png: string;
-  };
-  imageAlt?: string;
+  abbreviation?: string;
+  bg: string;
+  imageWebp: string;
+  imagePng: string;
+  imageAlt: string;
+  url: string;
 }
 
 export interface CompanyValue {
@@ -23,7 +23,7 @@ export interface PrincipalLogo {
 }
 
 export interface HomeConfig {
-  productCategories: ProductCategory[];
+  categories: ProductCategory[];
   values: CompanyValue[];
   principals: PrincipalLogo[];
 }

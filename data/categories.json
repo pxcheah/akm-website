@@ -1,0 +1,49 @@
+[
+  {
+    "categoryId": "frp",
+    "name": "Fibre Reinforced Plastics",
+    "abbreviation": "FRP",
+    "bg": "linear-gradient(34deg, #00aaac, #00c1d1)",
+    "imageWebp": "/images/categories/frp.webp",
+    "imagePng": "/images/categories/frp.png",
+    "imageAlt": "Yacht",
+    "url": "/products/frp"
+  },
+  {
+    "categoryId": "pu",
+    "name": "Polyurethanes",
+    "abbreviation": "PU",
+    "bg": "linear-gradient(60deg, #5e7293, #2d3748)",
+    "imageWebp": "/images/categories/pu.webp",
+    "imagePng": "/images/categories/pu.png",
+    "imageAlt": "Rigid polyurethane foam for cold rooms",
+    "url": "/products/pu"
+  },
+  {
+    "categoryId": "powder-coatings",
+    "name": "Powder Coatings",
+    "bg": "linear-gradient(34deg, #edb9c3, #ffb0bf)",
+    "imageWebp": "/images/categories/powder-coatings.webp",
+    "imagePng": "/images/categories/powder-coatings.png",
+    "imageAlt": "Cable trunking",
+    "url": "/products/powder-coatings"
+  },
+  {
+    "categoryId": "ceramic-coatings",
+    "name": "Ceramic Coatings",
+    "bg": "linear-gradient(146deg, #38a169, #2f855a)",
+    "imageWebp": "/images/categories/ceramic-coatings.webp",
+    "imagePng": "/images/categories/ceramic-coatings.png",
+    "imageAlt": "Ceramic tiles",
+    "url": "/products/ceramic-coatings"
+  },
+  {
+    "categoryId": "absorbants",
+    "name": "Absorbants",
+    "bg": "linear-gradient(to right, #ffc179, #f6ad55)",
+    "imageWebp": "/images/categories/absorbants.webp",
+    "imagePng": "/images/categories/absorbants.png",
+    "imageAlt": "Molecular sieve",
+    "url": "/products/absorbants"
+  }
+]

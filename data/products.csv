@@ -1,0 +1,36 @@
+﻿_,productId,name,description,categoryId,brand,principals,sectors
+,unsaturated-polyester-resin-orthophthalic,Unsaturated Polyester Resin (Orthophthalic),,frp,Norsodyne,Polynt,"Automotive,Building and Construction,Industrial,Marine"
+,unsaturated-polyester-resin-isophthalic,Unsaturated Polyester Resin (Isophthalic),,frp,Norsodyne,Polynt,"Automotive,Building and Construction,Industrial,Marine"
+,vinyl-ester-resin,Vinyl Ester Resin,,frp,Epovia,Polynt,"Building and Construction,Industrial"
+,gp-gelcoat,GP Gelcoat,,frp,Polycor,Polynt,"Aeolian,Marine,Textile"
+,iso-gelcoat,ISO Gelcoat,,frp,Polycor,Polynt,"Aeolian,Marine,Textile"
+,tooling-gelcoat,Tooling Gelcoat,,frp,Crystic,Scott Bader,"Automotive,Building and Construction,Marine"
+,chopped-strand-mat,Chopped Strand Mat,,frp,,"Weibo,Nittobo","Automotive,Building and Construction,Chemical,Marine"
+,chopeed-strand,Chopeed Strand,,frp,,Jushi,"Automotive,Building and Construction,Chemical,Marine"
+,woven-roving,Woven Roving,,frp,,"Weibo,Nittobo","Automotive,Building and Construction,Chemical,Electrical,Marine,Sports and Leisure,Wind Energy"
+,direct-roving,Direct Roving,,frp,,Jushi,"Automotive,Building and Construction,Chemical,Electrical,Marine,Sports and Leisure,Wind Energy"
+,gun-roving,Gun Roving,,frp,,Jushi,"Automotive,Building and Construction,Chemical,Electrical,Marine,Sports and Leisure,Wind Energy"
+,carbon-fibre,Carbon Fibre,,frp,,,"Aerospace,Automotive,Sports"
+,core-material,Core Material,,frp,Coremat,Lantor,"Marine,Transportation,Sports and Leisure,Industrial"
+,vacuum-infusion-core-material,Vacuum Infusion Core Material,,frp,Soric,Lantor,"Marine,Transportation,Sports and Leisure,Industrial,Wind Energy"
+,surface-tissue,Surface Tissue,,frp,Regina Glass,Regina Glass,"Marine,Building and Construction,Sports and Leisure"
+,surfacing-veil,Surfacing Veil,,frp,Regina Glass,Regina Glass,"Marine,Building and Construction,Sports and Leisure"
+,mekp-norox,MEKP (Norox),,frp,Norox,United Initiators,"Building and Construction,Marine,Wind Energy"
+,mekp-butanox,MEKP (Butanox),,frp,Butanox,Nouryon,"Building and Construction,Marine,Wind Energy"
+,cobalt,Cobalt,,frp,,,
+,mold-release-paste-wax,Mold Release Paste Wax,,frp,TR Industries,TR Industries,
+,mold-release-liquid-wax,Mold Release Liquid Wax,,frp,Frekote,Henkel,
+,pigment-paste-colors,Pigment Paste Colors,,frp,,,
+,fume-silica,Fume Silica,,frp,Cabosil M5,Cabot,
+,silicone-rubber,Silicone Rubber,,frp,RTV 585,,
+,epoxy-resin-lamination,Epoxy Resin (Lamination),,frp,Epolam,,
+,epoxy-resin-casting,Epoxy Resin (Casting),,frp,Epocast,,
+,epoxy-resin-primer,Epoxy Resin (Primer),,frp,Epoprim,,
+,acetone,Acetone,,frp,,,
+,bosny-wax,Bosny Wax,,frp,,,
+,polyol,Polyol,,pu,Daltofoam,Huntsman,
+,methyl-diphenyl-isocyanate-mdi,Methyl Diphenyl Isocyanate (MDI),,pu,Suprasec,Huntsman,
+,methylene-chloride,Methylene Chloride,,pu,,,
+,epoxy-polyester-hybrid-powders,Epoxy-Polyester Hybrid Powders,,powder-coatings,Terra Powder Coatings,,
+,ceramic-colors,Ceramic Colors,,ceramic-coatings,CCT,CCT,
+,molecular-sieve,Molecular Sieve,,absorbants,CWK,CWK,
